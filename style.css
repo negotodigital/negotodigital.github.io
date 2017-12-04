@@ -1,49 +1,146 @@
-html, body {
-  height: 100%;
-}
-
 body {
-  color: #666;
-  font-family: "source-sans-pro", sans-serif;
+  background: transparent url('images/bg-forest.jpg') no-repeat fixed center center;
+  background-size: cover;
+  color: #999;
+  font-family: 'source-sans-pro', 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 16px;
+  font-weight: 300;
   margin: 0;
 }
 
-.container {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  text-align: center;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  margin: 10px 0;
 }
 
-.centered {
-  width: 100%;
-  height: 200px;
-  position: fixed;
-  top: 50%;
-  margin-top: -100px;
-}
-
-h1 {
-  display: block;
-  height: 36px;
-  background: url('negoto-digital.png') no-repeat 0 0;
-  background-size: 100% auto;
-  direction: ltr;
-  text-indent: -9999em;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  width: 300px;
+h2 {
+  font-size: 30px;
 }
 
 p {
   margin: 0 0 20px;
 }
 
+a {
+  color: #222;
+}
+
+a:hover {
+  color: #444;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+header {
+  background-color: #fff;
+}
+
+header > div {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 60px 20px 30px;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  height: 36px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  width: 280px;
+}
+
+.logo h1 {
+  display: block;
+  height: auto;
+  background: url('images/negoto-digital.svg') no-repeat 0 0;
+  background-size: 100% auto;
+  direction: ltr;
+  text-indent: -9999em;
+  margin: 0;
+  width: 100%;
+}
+
+.portfolio {
+  background-color: #fff;
+}
+
+.portfolio > div {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 20px 70px;
+}
+
+.portfolio ul {
+  list-style: none;
+  margin: 0 -10px 0;
+  padding: 0;
+}
+
+.portfolio ul li {
+  float: left;
+  width: 100%;
+}
+
+.portfolio ul li > div {
+  padding: 10px;
+}
+
+.portfolio img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.portfolio-info,
+.portfolio-image {
+  box-sizing: border-box;
+  float: left;
+  padding: 20px;
+  width: 100%;
+}
+
+.void {
+  height: 400px;
+}
+
+footer {
+  background-color: #fff;
+}
+
+footer > div {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
 @media (min-width: 644px) {
-  h1 {
-    height: 74px;
-    width: 624px;
+  .logo {
+    height: 40px;
+    width: 310px;
+  }
+
+  .portfolio ul li {
+    width: 50%;
+  }
+
+  .portfolio-info,
+  .portfolio-image {
+    width: 50%;
   }
 }
