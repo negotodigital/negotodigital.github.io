@@ -23,6 +23,7 @@ p {
 
 a {
   color: #222;
+  transition: color 0.2s ease-in;
 }
 
 a:hover {
@@ -73,6 +74,24 @@ header > div {
   width: 100%;
 }
 
+#contact-btn {
+  background-color: #fff;
+  border: 1px solid #999;
+  border-radius: 0;
+  color: #999;
+  cursor: pointer;
+  font-family: 'source-sans-pro', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 8px 25px;
+  transition: all 0.2s ease-in;
+}
+
+#contact-btn:hover {
+  background-color: #444;
+  color: #fff;
+}
+
 .portfolio {
   background-color: #fff;
 }
@@ -81,6 +100,7 @@ header > div {
   margin: 0 auto;
   max-width: 980px;
   padding: 0 20px 70px;
+  text-align: center;
 }
 
 .portfolio ul {
@@ -110,6 +130,10 @@ header > div {
   float: left;
   padding: 20px;
   width: 100%;
+}
+
+.portfolio-info {
+  text-align: left;
 }
 
 .void {

@@ -1,7 +1,26 @@
-var texture = new TG.Texture( 600, 600 )
-  .add( new TG.XOR().tint( 1, 0.3, 0.3 ) )
-  .add( new TG.SinX().frequency( 0.004 ).tint( 0.25, 0, 0 ) )
-  .add( new TG.Noise().tint( 0.1, 0.1, 0.2 ) )
-  .toCanvas();
+!function() {
+  var t;
+  if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0, 
+  t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+  t.factory = function(e) {
+    return function() {
+      var n;
+      return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+    };
+  }, t.methods.forEach(function(e) {
+    t[e] = t.factory(e);
+  }), t.load = function(t) {
+    var e, n, o, i;
+    e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"), 
+    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js", 
+    n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+  });
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('3x9e6ugk97g8');
 
-document.getElementById("container").appendChild(texture);
+drift.on('ready',function(api, payload) {
+  document.getElementById('contact-btn').onclick = function() {
+    api.sidebar.open();
+  }
+});
